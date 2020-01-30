@@ -5,7 +5,7 @@
  # Veb aplikacija
 
  Zahtev je bio da se napravi veb aplikacija koja bi radnicima jedne bolnice omogućila lakši pristup informacijama vezanim za pacijente, kao i za praćnje stanja medikamenata. 
- Aplikacija je uradjena u framevorku za phpČ Larvel, a pojedini delovi sajta su uradjeni u JavaScript-u, i framevorku za JavaScript React-u. CSS je uradjen sa tehnologijama
+ Aplikacija je uradjena u framevorku za php Larvel, a pojedini delovi sajta su uradjeni u JavaScript-u, i framevorku za JavaScript React-u. CSS je uradjen sa tehnologijama
  Flexbox i Grid. 
 
  # Korisnici
