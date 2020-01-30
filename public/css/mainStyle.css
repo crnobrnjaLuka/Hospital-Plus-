@@ -1,0 +1,1512 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:200,300,400,500,600,700,800,900&display=swap&subset=latin-ext');
+
+
+:root
+{
+    --bojaJedan:#6E7DA2;
+    --bojaDva:#DB996C;
+    --bojaTri:#FCF8F3;
+    --bojaCetiri:#AEDADD;
+    --bojaA:#6E7DA2;
+    --bojaB:#DB996C;
+    --bojaC:#FCF8F3;
+    --bojaD:#AEDADD;
+}
+
+
+html
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+ol,ul,li
+{
+    list-style-type: none;
+}
+
+
+.kontenjer
+{
+    /* background-image: linear-gradient(lightblue,rgb(85, 85, 114)); */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+ /* .kontenjer::before 
+{
+    content: "";
+    background-image: linear-gradient(var(--compl-color),var(--compl-color-2));
+     background-image: url('../images/white-pattern-wallpaper.png'); 
+    background-image: url('../images/air-atmosphere-blue-blue-sky-314726.jpg');
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1000;
+}  */
+
+.header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bojaJedan);
+    height: 120px;
+    font-size: 1.2em;
+}
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+}
+
+.logo img
+{
+    width: 90px;
+}
+
+.divider
+{
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    border-left: thin solid var(--bojaTri);
+}
+
+a:link 
+{
+color: var(--bojaDva);
+}
+
+/* visited link */
+a:visited 
+{
+color:var(--bojaTri);
+}
+
+/* mouse over link */
+a:hover 
+{
+color: var(--bojaDva);
+text-shadow: 1px 1px var(--bojaJedan);
+font-weight: bold;
+}
+
+/* selected link */
+a:active 
+{
+color: var(--bojaC);
+font-weight: bold;
+}
+
+.login
+{
+    margin: 20px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.top-right {
+    margin-right: 25px;
+    margin-top: 15px;
+    height: 47px;
+    text-shadow: 1px 1px var(--bojaJedan);
+}
+
+.main
+{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bojaTri);
+}
+
+.glavna
+{
+    /* NE DIRAJ */
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex: 1 1 auto;
+    /* background-image: url('/images/vader.png');
+    background-repeat: no-repeat;
+    background-position: top; */
+
+
+    /* END NE DIRAJ */
+    position: fixed;
+    top: 120px;
+    right: 0;
+    left: 150px;
+    bottom: 0;
+    padding: 40px 20px 20px 20px;
+}
+
+/* .glavna::after
+{
+    content:' ';
+    display: block;
+    height: 80px;
+    width: 100%;
+} */
+
+.glavna::-webkit-scrollbar
+{
+    /* mora nesto da bude upisano u -scrollbar ; mora da bude povezano
+    sa elementom koji ima scrolbar */
+    /* background-color: green; */
+    width: 15px;
+}
+
+.glavna::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    background-color: var(--bojaB);
+}
+
+.glavna::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px;
+    background-color: white;
+}
+
+.mainContent
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.contentOptions
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.contentItems
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.optionsItems
+{
+    width: 33%;
+    height: 150px;
+    margin: 20px;
+    padding: 5px;
+    justify-items: center;
+    border: thin solid var(--bojaTri);
+    background-color: var(--bojaCetiri);
+}
+.optionKorisnik
+{
+    width: 100%;
+    margin: 20px;
+}
+.weather{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.weatherItems
+{   
+    width: 100%;
+    padding: 5px;
+    margin: 20px;
+    border: thin solid var(--bojaTri);
+    background-color: var(--bojaCetiri);
+}
+.reactApi
+{
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    color: var(--bojaJedan);
+}
+.city
+{
+    font-size: 50px;
+}
+.selectCity
+{
+    font-size: 35px;
+}
+.reactDate
+{
+    display: flex;
+    flex-direction: column;
+}
+.dateItems
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.dateItems span
+{
+    padding: 15px;
+    font-size: 23px;
+}
+.reactWeather
+{
+    display: flex;
+    flex-direction: column;
+}
+.temperature
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.temperature span
+{
+    padding: 15px;
+    font-size: 23px;
+}
+select/* #selectorGrad */
+{
+    cursor:pointer;
+    color: #6e7da2;
+    width: 130px;
+    height: 40px;
+    border-radius: 0.5em;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 20px;
+}
+.info
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+}
+.infoItems
+{
+    width: 100%;
+    background: var(--bojaCetiri);
+}
+.infoContainer
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+}
+.hospitalInfo
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.infoItems div span
+{
+    padding: 15px;
+    font-size: 20px;
+    color: var(--bojaJedan);
+}
+
+
+#kartoniStranica
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.karton
+{
+    /* display: flex; */
+    /* flex-direction: row; */
+    width: 100%;
+    padding: 20px;
+    border-radius: 3px;
+    /* flex-wrap: wrap; */
+    background: var(--bojaA);
+    color: var(--bojaTri);
+}
+
+.karton_grid
+{
+    display: grid;
+    grid-template-columns: minmax(125px,750px) minmax(275px,1650px);
+}
+
+.karton .pacijent-info h1
+{
+    margin: 0px auto 0px auto;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 600;
+}
+
+.karton .karton-info p
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.patient-list
+{
+    margin: 50px;
+}
+
+table
+{
+    width: 100%;
+    margin: 20px auto 20px;
+    border-collapse: collapse;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-align: center;
+    color: var(--bojaJedan);
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.1);
+}
+
+table:last-of-type
+{
+    margin-bottom: 100px;
+}
+
+tr
+{
+    background-color:  var(--bojaCetiri);
+}
+
+tr:nth-child(2n)
+{
+    background-color: white;
+}
+
+th
+{
+    color: var(--bojaTri);
+    background-color: var(--bojaA);
+    padding: 15px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 1px var(--bojaCetiri);
+}
+
+td
+{
+    padding: 3px 5px;
+}
+
+table tr td
+{
+    font-weight: 500;
+}
+
+table a:link
+{
+    color: black;
+}
+
+table a:visited
+{
+    color: black;
+}
+
+table a:hover
+{
+    color: var(--bojaD);
+    font-weight: bold;
+}
+
+table a:active
+{
+    color: var(--bojaD);
+    font-weight: bold;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    margin: 0px auto 20px auto;
+    padding: 5px;
+}
+
+.pacijentInfo
+{
+    display: flex;
+    flex-direction: column;
+    /* width: 30%; */
+    flex: 3 1 300px;
+}
+.pacijentKarton
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+
+}
+.col1
+{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+}
+.col2
+{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    margin-left: 20px;
+}
+.colInfo
+{
+    width: 50px;
+    background-color: var(--bojaTri);
+    border-radius: 3px;
+    color: var(--bojaJedan);
+    text-align: center;
+}
+.colNaslov
+{
+    height: 75px;
+}
+.colOstalo
+{
+    border-radius: 3px;
+    background-color: var(--bojaTri);
+    color: var(--bojaJedan);
+    text-align: center;
+    min-height: 33px;
+    margin: 2px 0;
+}
+.infoId
+{
+    font-size: 20px;
+}
+.infoImeNaslov
+{
+    height: 75px;
+}
+.infoIme 
+{
+    font-size: 32px;
+}
+
+.pacPod 
+{
+    margin-top: 3px;
+}
+
+
+.ostalo 
+{
+    font-size: 18px;
+}
+.istorijaBolesti
+{
+    display: flex;
+    flex-direction: column;
+    /* width: 70%; */
+    flex: 6 1 600px;
+    margin-left: 5px;
+}
+.istorijaBolestiLabel
+{
+    font-size: 20px;
+}
+.opisIstorijaBox
+{
+    height: 174px;
+    margin: 10px 0;
+    background-color: var(--bojaTri);
+    overflow: auto;
+    border-radius: 3px;
+    color: var(--bojaJedan);
+    text-align: center;
+}
+.opisIstorija
+{
+    padding: 10px;
+    overflow: auto;
+    text-align: left;
+}
+.opisIstorijaBox::-webkit-scrollbar
+{
+    width: 8px;
+}
+
+.opisIstorijaBox::-webkit-scrollbar-thumb
+{
+    background-color: var(--bojaCetiri);
+}
+
+.opisIstorijaBox::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 4px;
+    background-color: white;
+}
+textarea::-webkit-scrollbar
+{
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb
+{
+    background-color: var(--bojaCetiri);
+}
+
+textarea::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 4px;
+    background-color: white;
+}
+.nazad
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dodaj-posetu
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0 0 20px;
+}
+.poseteInfo
+{
+    display: grid;
+    grid-template-columns: repeat(8,minmax(50px,300px));
+    align-items: center;
+    height: 50px;
+    min-width: 500px;  
+    margin: 20px 0 10px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: var(--bojaJedan);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--bojaTri);
+}
+.nazadKont
+{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: flex-end;
+}
+
+.izmeni-karton
+{
+    margin-top: 80px;
+}
+
+.tabela-karton
+{
+    margin-top: 50px;
+}
+
+.tabela-karton caption
+{
+    font-size: 40px;
+}
+
+form, .forma
+{
+    background-color: var(--bojaA);
+    border: 1px solid var(--bojaC);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1280px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+form *
+{
+    padding: 2px;
+    margin: 3px;
+}
+
+.forma *
+{
+    padding: 2px;
+    margin: 3px;
+}
+
+
+button,#dugme
+{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: var(--bojaTri);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.20); */
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: var(--bojaJedan);
+    font-size: 1em;
+    font-weight: 400;
+    transition: all 0.3s;
+    border: 1px solid var(--bojaA);
+    border-radius: 10px;
+}
+.noviUnosDugme span
+{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.srednjeDugme
+{
+    width: 100px;
+    background-image: url('/images/check_32.png');
+    background-repeat: no-repeat;
+    background-position: 33px;
+}
+
+.r_karton_osnovni_podaci_dugme
+{
+    width: 180px;
+    height: 50px;
+    padding: 5px;
+    background-color: var(--bojaTri);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: var(--bojaJedan);
+    font-size: 1em;
+    font-weight: 400;
+    transition: all 0.3s;
+    border: 1px solid var(--bojaD);
+    border-radius: 20px;
+}
+
+.r_karton_osnovni_podaci_dugme:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px gray;
+    background-color: var(--bojaD);
+    color: var(--bojaTri);
+    border: 1px solid var(--bojaTri);
+}
+
+.srednjeDugme:hover
+{
+
+}
+
+.dugmeRezervisi
+{
+    box-shadow: 0 0 0 black;
+    overflow: hidden;
+}
+
+
+button:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px gray;
+    background-color: var(--bojaCetiri);
+    color: var(--bojaTri);
+    border: 1px solid var(--bojaTri);
+    
+}
+
+#dugme:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px gray;
+    background-color: var(--bojaCetiri);
+    color: var(--bojaTri);
+}
+
+
+.linkDugme
+{
+    margin-right: 20px;
+}
+
+.hidden
+{
+    visibility: hidden;
+}
+
+.disapear
+{
+    display:none;
+}
+
+.kartica
+{
+    position: absolute;
+    top: 30%; left: 35%;
+    height: 180px; width: 250px;
+    background-color: var(--bojaA);
+    z-index: 10;
+    padding: 5px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.kartica:hover
+{
+    box-shadow: 2px 10px 20px rgba(0,0,0,0.5);
+}
+
+.info_rez
+{
+    font-size: 1.4em;
+    color: var(--bojaA);
+    margin: 30px auto;
+}
+
+.bckRed
+{
+    background-color: var(--bojaB);
+    border: 1px solid var(--bojaD);
+    font-weight: bold;
+}
+
+.response
+{
+    
+    background-color: var(--bojaA);
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.response2
+{
+    
+    background-color: var(--bojaA);
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+/* flexRow je klasa koja se ne dira */
+.flexRow
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px auto 5px;
+    flex-wrap: wrap;
+}
+.flexRow h1
+{
+    color: var(--bojaJedan);
+    margin-top: 20px;
+}
+
+/* AKO TI TREBA NESTO RAZLICITO NAPRAVI NOVU KLASU*/
+.nekaNovaKlasa
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: 100px auto 5px;
+    flex-wrap: wrap;
+    color: var(--bojaA);
+}
+
+/* flexColumn je klasa koja se ne dira */
+.flexColumn
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flexColumnR
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.sveRez
+{
+    max-width: 490px;
+    margin: 20px auto;
+}
+
+.formZakazivanje
+{
+    background-color: var(--bojaA);
+    max-width: 2000px;
+    /* width: 100%; */
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 6px;
+    
+}
+
+textarea
+{
+    width: 100%;
+    color: var(--bojaJedan);
+    padding: 10px;
+}
+
+.formAddKM
+{
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.margin_5
+{
+    margin: 5px;
+}
+
+/* AKO SE KLASA ZOVE MARGIN 20 ONDA TREBA DA IMA MARGINU OD 20 PX */
+.margin_20
+{
+    margin: 20px;
+}
+.margin_top_25
+{
+    margin-top: 25px;
+}
+.margin_top_50
+{
+    margin-top: 50px;
+}
+.margin_top_100
+{
+    margin-top: 100px;
+}
+.bolestiNaslov
+{
+    display: contents;
+    color: var(--bojaA);
+}
+.marginWeather
+{
+    margin: 20px;
+}
+
+
+.modelsWraper
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 20px auto;
+}
+
+.card
+{
+    min-width: 531px;
+    max-width: 600px;
+    /* max-height: 182px; */
+    height: 182px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: var(--bojaA);
+    /* padding: 0px 2px 2px 0px; */
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+    transition: 0.2s;
+}
+
+.cardDisapear
+{
+    display: none;
+    flex-direction: unset;
+}
+
+.card:hover
+{
+    box-shadow: 2px 10px 25px rgba(0,0,0,0.5);
+}
+
+.slicica
+{
+    width: 50%;
+    height: 100%;
+}
+
+.opis
+{
+    text-align: center;
+    padding: 15px;
+    width: 33.4%;
+}
+
+label
+{
+    /* padding: 5px; */
+    font-size: 20px;
+    color: var(--bojaTri);
+}
+
+.modelCardName
+{
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    
+}
+
+.top-right a
+{
+    padding-left: 10px;
+}
+
+input
+{
+    min-width: 100px;
+    max-width: 400px;
+    width: 100px;
+    border: thin solid var(--bojaJedan);
+    border-radius: 5px;
+    color: var(--bojaTri);
+    padding: 5px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--bojaJedan);
+}
+.sacuvajKont
+{
+    margin: 20px 0 0 80px;
+}
+/* input:focus
+{
+    background-image: none;
+} */
+
+.linkA a
+{
+ margin: 10px;
+}
+
+
+.linkA a:link 
+{
+/* color: var(--main-color); */
+color:var(--bojaDva);
+font-weight: bold;
+}
+
+/* visited link */
+.linkA a:visited 
+{
+/* color: var(--main-color); */
+color:var(--bojaDva);
+font-weight: bold;
+}
+
+/* mouse over link */
+.linkA a:hover 
+{
+color: var(--bojaDva);
+font-weight: bold;
+}
+
+/* selected link */
+.linkA a:active 
+{
+color: var(--bojaC);
+font-weight: bold;
+}
+
+.errorBorder
+{
+    border: 2px solid var(--link-hover);
+}
+
+p
+{
+    margin: 2px;
+}
+
+.containerNama
+{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    padding: 5px 25px;
+}
+
+.slikaNama
+{
+    margin-right: 10px;
+    border-radius: 20px;
+    width: 35%;
+    min-width: 500px;
+}
+
+.slikaNama img
+{
+    border-radius: 20px;
+    width: 100%;
+}
+
+.textNama
+{
+    text-align: justify;
+    padding: 0px 5px;
+    margin-bottom:20px;
+    width: 60%;
+}
+
+.w33
+{
+    width: 33.3%;
+}
+
+.w50
+{
+    width: 50%;
+}
+
+.w100
+{
+    width: 100%;
+}
+
+/* Ne sme da se brise */
+#filter
+{
+    min-width: 100px;
+    max-width: 300px;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    padding: 5px 20px 5px 35px;
+    background-image: url('../images/search.png');
+}
+
+.inputCheckBox
+{
+    width: auto;
+    min-width: 100px;
+    padding: 0px;
+}
+
+.white
+{
+    color: white;
+}
+
+.date
+{
+    min-width: 105px;
+}
+
+.cardAd
+{
+    min-width: 331px;
+    max-width: 531px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: var(--bojaA);
+    width: 531px;
+    height: 182px;
+    margin: 20px;
+    justify-content: flex-start;
+}
+
+.slicicaAd
+{
+    width: 56.5%;
+    height: 100%;
+}
+
+.opisAd
+{
+    width: 43.5%;
+    text-align: center;
+    padding: 15px;
+}
+
+.padding_top_20
+{
+    padding-top: 20px;
+}
+
+.cenaOpisCard
+{
+    color: var(--link-hover);
+}
+
+.posZaht
+{
+    cursor: pointer;
+}
+
+.posZaht:hover
+{
+    color: var(--link-hover);
+}
+
+.margin_top_20
+{
+    margin-top: 20px;
+}
+
+.margin_top_40
+{
+    margin-top: 40px;
+}
+
+.img_drust
+{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+.img_drust_m
+{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+/*  */
+
+.ugnjezdena_tabela
+{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.hidden
+{
+    border: 1px solid var(--bojaC);
+    opacity: 0.5;
+    background-color: var(--bojaA);
+}
+
+.kartoniNaslov
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--bojaJedan);
+}
+.kartoniInfo
+{
+    display: grid;
+    grid-template-columns: repeat(5,minmax(50px,300px));
+    align-items: center;
+    height: 50px;
+    min-width: 500px;  
+    margin: 20px 0 10px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: var(--bojaJedan);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--bojaTri);
+}
+.kartonInput
+{
+    min-width: 240px;
+    max-width: 400px;
+    width: 100%;
+    border: thin solid var(--bojaJedan);
+    border-radius: 5px;
+    background-image: url(/images/search.png);
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    padding: 5px 20px 5px 35px;
+    background-color: var(--bojaTri);
+}
+
+
+.upis
+{
+    background-color: var(--bojaA);
+    display: grid;
+    grid-template-columns: 200px 200px 200px 140px;
+    /* justify-content: center; */
+    /* max-width: 1280px; */
+    /* margin: 5px auto; */
+    /* justify-items: center; */
+    align-items: end;
+}
+
+.donje
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--bojaA);
+}
+.poljaKont
+{
+    display: flex;
+    flex-direction: row;
+}
+.naziviPolja
+{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.posetaKont
+{
+    padding: 10px;
+    font-size: 20px;
+    height: 60px;
+    color: var(--bojaTri);
+}
+.textBoxNaziv
+{
+    height: 180px;
+    padding: 10px;
+    color: var(--bojaTri);
+    font-size: 20px;
+}
+.inputPolja
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+}
+.selectKont
+{
+   padding: 10px;
+}
+.textBox
+{
+    width: 90%;
+    padding: 10px;
+}
+.parentUpis
+{
+    margin-left: 20%;
+}
+
+
+aside
+{
+   background-color:var(--bojaDva);
+   padding: 5px;
+   flex:0 0 150px;
+}
+
+aside label
+{
+    width: 100%;
+}
+
+aside ul
+{
+    margin-left: 40px;
+    font-size: 1.2em;
+}
+
+.nav-btn{
+    height: 70px;
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.nav-aside{
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.nav-aside:first-of-type
+{
+    margin-top: 90px;
+}
+/* .nav-btn:hover{
+    background-color: var(--bojaCetiri);
+} */
+.nav-btn i{
+    margin: 0 10px;
+}
+.nav-aside img
+{
+    width: 50px;
+}
+.nav-aside img:hover
+{
+    width: 65px;
+}
+.btn-icons
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+}
+.btn-icons:hover
+{
+    background-color: var(--bojaTri);
+}
+
+.records
+{
+    font-size: 35px;
+    color: var(--bojaJedan);
+}
+
+.grid-weather
+{
+    display: grid;
+    grid-template-columns: fit-content(250px)  250px;
+    width: 500px;
+    height: 250px;
+    border: 1px solid var(--bojaC);
+    border-radius: 25px;
+    background-color: var(--bojaA);
+    font-family: 'Bree Serif', serif;
+    font-weight: normal;
+}
+.grid-weather div
+{
+    margin: 10px;
+}
+
+.grid-weather .city p:first-of-type
+{
+    font-size: 35px;
+}
+.grid-weather .city select
+{
+    margin-top: 10px;
+    width: 120px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.grid-weather .city p:last-of-type
+{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.grid-weather .city span
+{
+    font-size: 20px;
+    
+}
+.grid-weather .city span img
+{
+    margin-top: 30px;
+}
+.grid-weather .weather span
+{
+    font-size: 40px;
+}
+
+.vueApi div.vreme p 
+{
+    font-size: 60px;
+}
+
+.nw
+{
+    flex-wrap: nowrap;
+}
+
+.showVisit
+{
+    background-color: var(--bojaB);
+    border: 2px solid var(--bojaC);
+}
+.tabelaOboljenja
+{
+    width: 100%;
+    padding: 18px;
+    min-width: 800px;
+    max-width: 1400px;
+}
+.leftMargin
+{
+    margin-left: 85px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .contentOptions {
+        width: 100%;
+        
+    }
+    
+  }
+  

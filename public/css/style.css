@@ -1,0 +1,1311 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:200,300,400,500,600,700,800,900&display=swap&subset=latin-ext');
+
+:root
+{
+    --main-color: #84a0d4;
+    --compl-color: #ed9d64;
+    --mono-color: #6495ed;
+    --compl-color-2: #ed7b64;
+    --link-hover: #d13415;
+    
+}
+
+
+html
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+}
+
+.card,.cardAd,table
+{
+    font-family: 'Archivo', sans-serif;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+.footer
+{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    background-color:#B0C4DE;
+    height: 80px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    padding: 10px;
+    font-family: 'Bree Serif', serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+    border-top: 1px solid #9A0606;
+}
+.info
+{
+    padding: 20px;
+}
+.icons span 
+{
+    margin-right: 20px;
+}
+.icons span img
+{
+    margin-right: 10px;
+    width: 30px;
+}
+
+
+.container
+{
+    /* background-image: linear-gradient(lightblue,rgb(85, 85, 114)); */
+    position: relative;
+    height: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+ /* .container::before 
+{
+    content: "";
+    background-image: linear-gradient(var(--compl-color),var(--compl-color-2));
+     background-image: url('../images/white-pattern-wallpaper.png'); 
+    background-image: url('../images/air-atmosphere-blue-blue-sky-314726.jpg');
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1000;
+}  */
+
+.rezervacija
+{
+    /* background-image: url('../images/high-angle-view-of-cityscape-against-cloudy-sky-313782.jpg'); */
+    background-image: url('../images/air-atmosphere-blue-blue-sky-314726.jpg');
+    min-height: 100%;
+}
+
+.rezervacija::after
+{
+    content:' ';
+    display: block;
+    height: 80px;
+    width: 100%;
+}
+
+.velikiTekst
+{
+    padding: 10px;
+    color: white;
+}
+
+.dodaci
+{
+    background-image: url('../images/blue-and-white-milky-way-3214110.jpg');
+    min-height: 100%;
+}
+
+.dodaci::after
+{
+    content:' ';
+    display: block;
+    height: 80px;
+    width: 100%;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+ol,ul,li
+{
+    list-style-type: none;
+}
+
+.header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #B0C4DE;
+    height: 80px;
+    font-size: 1.2em;
+    border-bottom: 1px solid #9A0606;
+}
+.logo
+{
+    margin: 20px;
+}
+
+a:link 
+{
+color: white;
+}
+
+/* visited link */
+a:visited 
+{
+color: white;
+}
+
+/* mouse over link */
+a:hover 
+{
+color: var(--compl-color-2);
+font-weight: bold;
+}
+
+/* selected link */
+a:active 
+{
+color: var(--compl-color-2);
+font-weight: bold;
+}
+.login
+{
+    margin: 20px;
+    font-family: 'Bree Serif', serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+}
+.top-right {
+    margin-right: 25px;
+    margin-top: 15px;
+    height: 47px;
+    text-shadow: 1px 1px black;
+}
+
+.meni,.adminMeni
+{
+    margin-right: 20px;
+    cursor: pointer;
+    height: 80px;
+    color: white;
+}
+
+.meniCart,.adminMeniCart
+{
+    border-top: 1px solid black;
+    background-color: var(--main-color);
+    position: absolute;
+    line-height: 30px;
+    top:80px;
+    /* visibility: hidden; */
+    display: none;
+    overflow: hidden;
+    padding: 0px 5px;
+}
+
+.meni:hover .meniCart
+{
+    /* visibility: visible; */
+    display: block;
+    animation: padajuci_meni 0.4s;
+    animation-timing-function: linear;
+    height: auto;
+}
+
+.adminMeni:hover .adminMeniCart
+{
+    /* visibility: visible; */
+    display: block;
+    animation: padajuci_meni 0.4s;
+    animation-timing-function: linear;
+    height: auto;
+}
+
+@keyframes padajuci_meni{
+    0% {
+        height: 0px;
+    }
+
+    10% {
+        height: 6px;
+    }
+
+    20% {
+        height: 12px;
+    }
+
+    30% {
+        height: 18px;
+    }
+
+    40% {
+        height: 24px;
+    }
+
+    50% {
+        height: 30px;
+    }
+
+    60% {
+        height: 36px;
+    }
+
+    70% {
+        height: 42px;
+    }
+
+    80% {
+        height: 48px;
+    }
+
+    90% {
+        height: 54px;
+    }
+
+    100% {
+        height: 60px;
+    }
+}
+
+.header li:hover
+{
+    background-color: var(--mono-color);
+}
+
+.glavna
+{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    width: 85%;
+    height: 91.5vh;
+    text-align: center;
+    overflow: auto;
+    padding-top: 20px;
+}
+
+.glavna::after
+{
+    content:' ';
+    display: block;
+    height: 80px;
+    width: 100%;
+}
+.karton
+{
+    display: grid;
+    grid-template-columns: 520px 520px;
+    border: 1px solid #9A0606;
+    background: #B0C4DE;
+    color: white;
+    text-shadow: 2px 1px #778899;
+
+}
+.karton .pacijent-info h1
+{
+    margin: 0px auto 0px auto;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 600;
+}
+.karton .karton-info p
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+.patient-list
+{
+    margin: 50px;
+}
+table
+{
+    width: 1040px;
+    border: 1px solid #9A0606;
+    margin: 20px auto 20px;
+    border-collapse: collapse;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    max-width: 1400px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.1);
+}
+
+table:last-of-type
+{
+    margin-bottom: 100px;
+}
+
+tr
+{
+    background-color:  #B0C4DE;
+    border-bottom: 1px solid #9A0606;
+}
+
+tr:nth-child(2n)
+{
+    background-color: white;
+}
+
+th
+{
+    color: white;
+    background-color: #778899;
+    padding: 15px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 1px 1px black;
+}
+
+td
+{
+    padding: 3px 5px;
+}
+table tr td
+{
+    font-weight: normal;
+}
+table a:link
+{
+    color: black;
+}
+
+table a:visited
+{
+    color: black;
+}
+
+table a:hover
+{
+    color: var(--link-hover);
+    font-weight: bold;
+}
+
+table a:active
+{
+    color: var(--link-hover);
+    font-weight: bold;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    margin: 0px auto 20px auto;
+    padding: 5px;
+}
+.pacijent-info
+{
+    margin-left: 30px;
+    text-align: left;
+}
+.karton-info
+{
+    text-align: left;
+}
+/* .dodaj-posetu
+{
+    margin-top: 80px;
+} */
+.izmeni-karton
+{
+    margin-top: 80px;
+}
+.tabela-karton
+{
+    margin-top: 50px;
+}
+.tabela-karton caption
+{
+    font-size: 40px;
+}
+
+form, .forma
+{
+    background-color: #B0C4DE;
+    border: 1px solid #9A0606;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1280px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+form *
+{
+    padding: 2px;
+    margin: 3px;
+}
+
+.forma *
+{
+    padding: 2px;
+    margin: 3px;
+}
+
+
+button,#dugme
+{
+    width: 60px;
+    padding: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    transition: all 0.3s;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#dugme
+{
+    padding: 20px 30px;
+    max-width: 400px;
+}
+
+#dugme2
+{
+    padding: 10px 15px;
+}
+
+.dugmeRezervisi
+{
+    box-shadow: 0 0 0 black;
+    overflow: hidden;
+}
+
+
+button:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px gray;
+    background-color: #778899;
+    color: white;
+    transform: translate(2px,2px);
+    border-top: 1px solid #778899;
+    border-left: 1px solid #778899;
+    
+}
+
+#dugme:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px gray;
+    background-color: var(--compl-color-2);
+    color: white;
+    transform: translate(2px,2px);
+    border-top: 3px solid var(--compl-color-2);
+    border-left: 3px solid var(--compl-color-2);
+}
+
+#dugme2:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px gray;
+    background-color: var(--compl-color-2);
+    color: white;
+    transform: translate(2px,2px);
+    border-top: 3px solid var(--compl-color-2);
+    border-left: 3px solid var(--compl-color-2);
+}
+
+.dugmeRezervisi:hover
+{
+    transform: translate(0px,0px);
+    border: 2px solid black;
+}
+.linkDugme
+{
+    margin-right: 20px;
+}
+
+.hidden
+{
+    visibility: hidden;
+}
+
+.disapear
+{
+    display:none;
+}
+
+.kartica
+{
+    position: absolute;
+    top: 30%; left: 35%;
+    height: 180px; width: 250px;
+    
+    background-color: var(--compl-color);
+    z-index: 10;
+    padding: 5px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.kartica:hover
+{
+    box-shadow: 2px 10px 20px rgba(0,0,0,0.5);
+}
+
+.info_rez
+{
+    font-size: 1.4em;
+    color: var(--main-color);
+    margin: 30px auto;
+}
+
+.bckRed
+{
+    background-color: var(--compl-color);
+    border: 1px solid var(--compl-color-2);
+    font-weight: bold;
+}
+
+.response
+{
+    
+    background-color: var(--main-color);
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.response2
+{
+    
+    background-color: var(--main-color);
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+
+.flexRow
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px auto 5px;
+    flex-wrap: wrap;
+}
+
+.flexColumn
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sveRez
+{
+    max-width: 490px;
+    margin: 20px auto;
+}
+
+.glavna::-webkit-scrollbar
+{
+    /* mora nesto da bude upisano u -scrollbar ; mora da bude povezano
+    sa elementom koji ima scrolbar */
+    /* background-color: green; */
+    width: 15px;
+}
+
+.glavna::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    background-color: var(--compl-color-2);
+}
+
+.glavna::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px;
+    background-color: #f5f5f5;
+}
+
+.formZakazivanje
+{
+    background-color: var(--main-color);
+    max-width: 2000px;
+    /* width: 100%; */
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 6px;
+    
+}
+
+textarea
+{
+    width: 90%;
+}
+
+.formAddKM
+{
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.margin_5
+{
+    margin: 5px;
+}
+
+.margin_20
+{
+    margin: 20px;
+}
+
+.modelsWraper
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 20px auto;
+}
+
+.card
+{
+    min-width: 531px;
+    max-width: 600px;
+    /* max-height: 182px; */
+    height: 182px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: var(--main-color);
+    /* padding: 0px 2px 2px 0px; */
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+    transition: 0.2s;
+}
+
+.cardDisapear
+{
+    display: none;
+    flex-direction: unset;
+}
+
+.card:hover
+{
+    box-shadow: 2px 10px 25px rgba(0,0,0,0.5);
+}
+
+.slicica
+{
+    width: 50%;
+    height: 100%;
+}
+
+.opis
+{
+    text-align: center;
+    padding: 15px;
+    width: 33.4%;
+}
+
+label
+{
+    padding: 5px;
+    min-width: 250px;
+}
+
+.modelCardName
+{
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    
+}
+
+.top-right a
+{
+    padding-left: 10px;
+}
+
+input
+{
+    min-width: 240px;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #9A0606;
+    padding: 2px;
+    text-align: center;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.linkA a
+{
+ margin: 10px;
+}
+
+
+.linkA a:link 
+{
+/* color: var(--main-color); */
+color:white;
+font-weight: bold;
+}
+
+/* visited link */
+.linkA a:visited 
+{
+/* color: var(--main-color); */
+color: white;
+font-weight: bold;
+}
+
+/* mouse over link */
+.linkA a:hover 
+{
+color: var(--compl-color-2);
+font-weight: bold;
+}
+
+/* selected link */
+.linkA a:active 
+{
+color: var(--compl-color-2);
+font-weight: bold;
+}
+
+.errorBorder
+{
+    border: 2px solid var(--link-hover);
+}
+
+p
+{
+    margin: 2px;
+}
+
+.containerNama
+{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    padding: 5px 25px;
+}
+
+.slikaNama
+{
+    margin-right: 10px;
+    border-radius: 20px;
+    width: 35%;
+    min-width: 500px;
+}
+
+.slikaNama img
+{
+    border-radius: 20px;
+    width: 100%;
+}
+
+.textNama
+{
+    text-align: justify;
+    padding: 0px 5px;
+    margin-bottom:20px;
+    width: 60%;
+}
+
+.w33
+{
+    width: 33.3%;
+}
+
+.w50
+{
+    width: 50%;
+}
+
+.w100
+{
+    width: 100%;
+}
+
+/* Ne sme da se brise */
+#filter
+{
+    min-width: 100px;
+    max-width: 300px;
+}
+
+.inputCheckBox
+{
+    width: auto;
+    min-width: 100px;
+    padding: 0px;
+}
+
+.white
+{
+    color: white;
+}
+
+.filter_modeli
+{
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.cenaZvezdica
+{
+    position: relative;
+}
+
+.cenaZvezdica:hover::after
+{
+    content: "* Cene su po danu u zavisnosti od dužine rezervacije.";
+    font-size: 15px;
+    line-height: 15px;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    background-color: var(--compl-color);
+    width: auto;
+    padding: 7px;
+}
+
+.date
+{
+    min-width: 105px;
+}
+
+.cardAd
+{
+    min-width: 331px;
+    max-width: 531px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: var(--main-color);
+    width: 531px;
+    height: 182px;
+    margin: 20px;
+    justify-content: flex-start;
+}
+
+.slicicaAd
+{
+    width: 56.5%;
+    height: 100%;
+}
+
+.opisAd
+{
+    width: 43.5%;
+    text-align: center;
+    padding: 15px;
+}
+
+.padding_top_20
+{
+    padding-top: 20px;
+}
+
+.cenaOpisCard
+{
+    color: var(--link-hover);
+}
+
+.posZaht
+{
+    cursor: pointer;
+}
+
+.posZaht:hover
+{
+    color: var(--link-hover);
+}
+
+.margin_top_20
+{
+    margin-top: 20px;
+}
+
+.margin_top_40
+{
+    margin-top: 40px;
+}
+
+.img_drust
+{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+.img_drust_m
+{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+/*  */
+
+.ugnjezdena_tabela
+{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.vueFormaVisit
+{
+    border: 1px solid black;
+}
+
+.hidden
+{
+    border: 1px solid green;
+    opacity: 0.5;
+    background-color: yellow;
+}
+
+.flexRow
+{
+    display: flex;
+    justify-content: center;
+}
+
+.upis
+{
+    border: 1px solid red;
+    background-color: rgb(198, 215, 230);
+}
+
+.donje
+{
+    border: 1px solid blue;
+    text-align: center;
+    background-color: springgreen;
+}
+
+.upis
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 100px;
+    justify-content: center;
+    width: 1280px;
+    margin: 5px auto;
+    
+}
+
+aside
+{
+   width: 15%; 
+   background-color:#778899;
+   padding: 5px;
+   border-right: 1px solid #9A0606;
+}
+
+aside label
+{
+    width: 100%;
+}
+
+aside ul
+{
+    margin-left: 40px;
+    font-size: 1.2em;
+}
+
+.grid-weather
+{
+    display: grid;
+    grid-template-columns: fit-content(250px)  250px;
+    width: 500px;
+    height: 250px;
+    border: 1px solid #9A0606;
+    border-radius: 25px;
+    background-color: #B0C4DE;
+    font-family: 'Bree Serif', serif;
+    font-weight: normal;
+}
+.grid-weather div
+{
+    margin: 10px;
+}
+
+.grid-weather .city p:first-of-type
+{
+    font-size: 35px;
+}
+.grid-weather .city select
+{
+    margin-top: 10px;
+    width: 120px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.grid-weather .city p:last-of-type
+{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.grid-weather .city span
+{
+    font-size: 20px;
+    
+}
+.grid-weather .city span img
+{
+    margin-top: 30px;
+}
+.grid-weather .weather span
+{
+    font-size: 40px;
+}
+
+.vueApi div.vreme p 
+{
+    font-size: 60px;
+}
+
+.oneVisit
+{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    height: 300px;
+    width: 500px;
+    background-color: var(--compl-color);
+    z-index: 10;
+    padding: 5px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+    overflow: auto;
+    transition: box-shadow 0.3s;
+    border: groove 5px var(--compl-color-2);
+}
+
+.oneVisit:hover
+{
+    box-shadow: 2px 10px 20px rgba(0,0,0,0.5);
+    cursor: move;
+}
+
+.partVisit
+{
+    padding: 5px;
+}
+
+.oneVisit::-webkit-scrollbar
+{
+    /* mora nesto da bude upisano u -scrollbar ; mora da bude povezano
+    sa elementom koji ima scrolbar */
+    /* background-color: green; */
+    width: 15px;
+}
+
+.oneVisit::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    background-color: var(--compl-color-2);
+}
+
+.oneVisit::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px;
+    background-color: #f5f5f5;
+}
+
+
+@media screen and (max-width:1180px)
+{
+    .glavnaAdmin
+    {
+        overflow-x: scroll;
+    }
+
+    .glavna::-webkit-scrollbar
+    {
+        width: 10px;
+    }
+
+    .glavnaAdmin::-webkit-scrollbar
+    {
+        width: 15px;
+    }
+
+    .glavnaAdmin::-webkit-scrollbar-thumb
+    {
+        border-radius: 6px;
+        background-color: var(--compl-color-2);
+    }
+
+    .glavnaAdmin::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px;
+        background-color: #f5f5f5;
+    }
+
+
+
+@media screen and (max-width:1180px)
+{
+    .glavnaAdmin
+    {
+        overflow-x: scroll;
+    }
+
+    .glavna::-webkit-scrollbar
+    {
+        width: 10px;
+    }
+
+    .glavnaAdmin::-webkit-scrollbar
+    {
+        width: 15px;
+    }
+
+    .glavnaAdmin::-webkit-scrollbar-thumb
+    {
+        border-radius: 6px;
+        background-color: var(--compl-color-2);
+    }
+
+    .glavnaAdmin::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px;
+        background-color: #f5f5f5;
+    }
+
+    table 
+    {
+        font-size: 0.8em;
+        max-width: 1180px;
+        width: 100%;
+    }
+
+    .tr_img td:first-child
+    {
+        width: 41%;
+    }
+
+    td img 
+    {
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width:984px)
+{
+    table 
+    {
+        font-size: 0.60em;
+        max-width: 984px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:762px)
+{
+    .header
+    {
+        height: 60px;
+        font-size: 0.9em;
+    }
+
+    .footer
+    {
+        height: 60px;
+        font-size: 0.9em;
+    }
+
+    .meniCart, .adminMeniCart 
+    {
+        top: 60px;
+    }
+
+    .rezervacija::after
+    {
+        height: 60px;
+    }
+
+    .glavna::after
+    {
+        height: 20px;
+    }
+
+    .dodaci::after
+    {
+        height: 60px;
+    }
+
+}
+
+@media screen and (max-width:572px)
+{
+    .card 
+    {
+        min-width: 320px;
+        max-width: 389px;
+        max-height: 130px;
+    }
+
+    .opis
+    {
+        padding: 5px;
+        font-size: 0.65em;
+    }
+
+    .modelCardName
+    {
+        padding-bottom: 10px;
+    }
+
+    .dugmeRezervisi
+    {
+        font-size: 0.9em;
+        width: 16.6%;
+    }
+
+    .cardAd
+    {
+        min-width: 320px;
+        max-width: 389px;
+        height: 130px;
+        margin: 10px;
+        justify-content: space-between;
+    }
+
+    .opisAd
+    {
+        padding: 5px;
+        font-size: 0.65em;
+    }
+}

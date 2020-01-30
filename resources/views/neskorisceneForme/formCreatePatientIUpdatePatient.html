@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .disapear
+        {
+            display: none;
+        }
+    
+    
+    </style>
+</head>
+<body>
+        <!-- visak->jmbg,ime,prezime,dat_rodjenja,grad,ulica,broj,lekar -->
+
+        <!-- forma za izmenu ce imati i: -->
+
+        <!-- <input type="number" name='id' value="ucitano" readonly required> -->
+
+        <!-- i ostatak nije requred -->
+
+        <form action="#" method="POST">
+            @csrf
+            Ime <input type="text" name="ime" value="" requred>
+            Prezime <input type="text" name="prezime" value="" requred>
+
+            <!-- ovo je duplo zato da bi menjalo izgled datuma na naski -->
+            <label for="dateRodj" id="label1">Datum Rodjenja <input type="date" name="dat_rodjenja" value="" id="dateRodj" requred></label>
+            <label for="dateRodj2" id="label2" class="disapear">Datum Rodjenja <input type="text" id="dateRodj2"></label>
+            
+            
+            
+            Grad <input type="text" name="grad" value="" requred>
+            Ulica <input type="text" name="ulica" value="" requred>
+            Broj <input type="text" name="broj" value="" requred>
+            JMBG <input type="number" name="jmbg" value="" requred>
+            <select name="lekar">
+                <option value="lekar_id">lekar username</option>
+                <!-- ... -->
+            </select>
+            
+            <!-- Mozda treba dodati i neki kontakt u tabelu sa pacijentom. Pitati Vilusa.  -->
+            <input type="submit" value="Posalji">
+
+
+        </form>
+
+        <script src="biblioteka.js"></script>
+        <script>
+                let dateStartLabel=document.querySelector('#label1');
+                let dateStartLabel2=document.querySelector('#label2');
+                let dateStartInput=document.querySelector('#dateRodj');
+                let dateStartInput2=document.querySelector('#dateRodj2');
+            
+                function changeVisibilityStart()
+                {
+                    dateStartLabel.classList.toggle('disapear');
+                    dateStartLabel2.classList.toggle('disapear');
+                }
+            
+                //dogadjaji
+                dateStartInput.addEventListener('change',function()
+                {
+                    changeVisibilityStart();
+                    dateStartInput2.value=pf.dateToSerbianFormat(dateStartInput.value);
+                })
+            
+                dateStartInput2.addEventListener('click',function()
+                {
+                    changeVisibilityStart();
+                    dateStartInput.value="";
+                    dateStartInput.focus();
+                })
+
+                //dodatak samo ako je update forma
+                // changeVisibilityStart();
+                // dateStartInput2.value=pf.dateToSerbianFormat(dateStartInput.value);
+            </script>
+</body>
+</html>

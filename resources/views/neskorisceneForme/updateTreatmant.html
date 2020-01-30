@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .disapear
+        {
+            display: none;
+        }
+    
+    
+    </style>
+</head>
+<body>
+        <!-- visak->ID,ime,prezime,datum_rodj,istorija_bolesti, alergija_lek -->
+
+        <!-- forma za izmenu ce imati i: -->
+
+        <!-- <input type="number" name='id' value="ucitano" readonly required> -->
+
+        <!-- i ostatak nije requred -->
+
+        <form action="#" method="POST">
+            @csrf
+            Broj Tretmana <input type="number" name='id' value="ucitano" readonly required>
+            Pacijent: <label for="pacijent"><input type="text" id="pacijent" name="id_pacijent" value='ucitano iz baze' ></label>
+                   Lekar: <label for="lekar"><input type="text" id="lekar" name="id_lekar" value='ucitano iz baze' ></label>
+
+            <label for=zadnji.sbId>Sifra bolesti: <input type="text"  name="sifraBolesti" id=zadnji.sbId value="ucitano"></label>
+            <label for=zadnji.slId>Sifra leka: <input type="text" name="sifraLeka" id=zadnji.slId value="ucitano"></label>
+            <label for=zadnji.klId>Kolicina leka: <input type="number"  name="lek_prepisana_kolicina" id=zadnji.klId value="ucitano"></label>
+
+            <label for="tipPosete">
+                    <select name="tip_pos" id="tipPosete">
+                        <!-- if checked -->
+                        <option value="1">Prva Poseta</option>
+                        <option value="0">Kontrolna Poseta</option>
+                    </select>
+            </label>
+
+            <!-- ovo je duplo zato da bi menjalo izgled datuma na naski -->
+            <label for="dateRodj" id="label1">Datum Posete <input type="date" name="datum" value="2019-12-08" id="dateRodj" requred></label>
+            <label for="dateRodj2" id="label2" class="disapear">Datum Posete <input type="text" id="dateRodj2"></label>
+            
+            <label for="dijagnoza">Dijagnoza <br><textarea id="dijagnoza" cols="30" rows="10"></textarea></label><br>
+            <label for="terapija">Terapija <br><textarea id="terapija" cols="30" rows="10"></textarea></label><br>
+           
+            <input type="submit" value="Posalji">
+
+
+        </form>
+
+        <script src="biblioteka.js"></script>
+        <script>
+                let dateStartLabel=document.querySelector('#label1');
+                let dateStartLabel2=document.querySelector('#label2');
+                let dateStartInput=document.querySelector('#dateRodj');
+                let dateStartInput2=document.querySelector('#dateRodj2');
+            
+                function changeVisibilityStart()
+                {
+                    dateStartLabel.classList.toggle('disapear');
+                    dateStartLabel2.classList.toggle('disapear');
+                }
+            
+                //dogadjaji
+                dateStartInput.addEventListener('change',function()
+                {
+                    changeVisibilityStart();
+                    dateStartInput2.value=pf.dateToSerbianFormat(dateStartInput.value);
+                })
+            
+                dateStartInput2.addEventListener('click',function()
+                {
+                    changeVisibilityStart();
+                    dateStartInput.value="";
+                    dateStartInput.focus();
+                })
+
+                //dodatak, automatsko pozivanje
+                changeVisibilityStart();
+                dateStartInput2.value=pf.dateToSerbianFormat(dateStartInput.value);
+            </script>
+</body>
+</html>

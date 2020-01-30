@@ -1,0 +1,287 @@
+
+:root
+{
+    --bojaA:#6E7DA2;
+    --bojaB:#DB996C;
+    --bojaC:#FCF8F3;
+    --bojaD:#AEDADD;
+    
+}
+
+.r_scroll
+{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    overflow: auto;
+    margin: 5px auto;
+}
+
+.r_scroll::-webkit-scrollbar
+{
+    /* mora nesto da bude upisano u -scrollbar ; mora da bude povezano
+    sa elementom koji ima scrolbar */
+    /* background-color: green; */
+    width: 15px;
+}
+
+.r_scroll::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    background-color: var(--bojaC);
+}
+
+.r_scroll::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px;
+    background-color: white;
+}
+.pacijentKartonNaslov
+{
+    display: flex;
+    color: var(--bojaA);
+}
+.pacijentKartonNaslov h1
+{
+    /* color: var(--bojaA); */
+}
+.r_pacijent
+{
+    display: grid;
+    min-width: 500px;
+    grid-template-columns: repeat(5,minmax(50px,300px));
+    margin: 5px auto;
+    background-color: var(--bojaD);
+    padding: 3px;
+    border-radius: 3px;
+    color: var(--bojaA);
+    font-weight: 600;
+}
+
+.r_pacijent:hover
+{
+    cursor: pointer;
+}
+
+.r_karton
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.r_osnovni
+{
+    border: 1px solid var(--bojaB);
+    background-color: var(--bojaA);
+    width: 70%;
+    margin: 5px auto;
+}
+
+.r_visit
+{
+    /* display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bojaB);
+    margin: 0px auto 10px;
+    border-radius: 5px; */
+    display: grid;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bojaD);
+    margin: 0px auto 10px;
+    border-radius: 5px;
+}
+.dijagnoza
+{
+    display: grid;
+}
+
+.r_visit:hover
+{
+    cursor: pointer;
+}
+
+.r_treatmant
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px auto 5px;
+    flex-wrap: nowrap;
+    background-color: var(--bojaD);
+}
+
+.r_treatmant_grid
+{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(50px,300px));
+    text-align: center;
+    color: var(--bojaA);
+    font-weight: 600;
+}
+
+.r_space_beetwen
+{
+    justify-content: space-between;
+    color: #637091;
+    padding: 10px;
+    align-items: center;
+    background-color: var(--bojaC);
+    margin: 10px 10px;
+}
+.r_space_beetwen button
+{
+    margin: 0;
+    width: 40px;
+}
+
+/* obrati paznju na color */
+.r_naslov
+{
+    /* color: red;
+    margin: 2px auto 10px; */
+}
+
+.r_naslov_c
+{
+    background-color: #637091;
+    color: #FCF8F3;
+    font-weight: 200;
+}
+
+.prazan
+{
+    position:relative;
+}
+
+.flexRowRight
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.flexRowRight button
+{
+    margin: 10px 10px;
+}
+
+.r_visit_form
+{
+    background-color: var(--bojaA);
+    position: absolute; 
+    top:10%;
+    left:20%;
+    border: 3px solid var(--bojaD);
+    width:980px;
+    height: 750px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.r_visit_form::-webkit-scrollbar
+{
+    /* mora nesto da bude upisano u -scrollbar ; mora da bude povezano
+    sa elementom koji ima scrolbar */
+    /* background-color: green; */
+    width: 15px;
+}
+
+.r_visit_form::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    background-color: var(--bojaC);
+}
+
+.r_visit_form::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px;
+    background-color: white;
+}
+
+.r_visit_screen
+{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* obrati paznji na color */
+.r_error
+{
+    background-color: var(--bojaC);
+    width: 100%;
+    color: var(--bojaA);
+    text-align: center;
+}
+
+.r_error:first-child
+{
+    margin-top: 10px;
+}
+.formaReact
+{
+    width: 100%;
+    height: auto;
+    background-color: var(--bojaA);
+    border-radius: 3px;
+}
+.formaKont
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.izmeniNaslovi
+{ 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 20px;
+}
+.izmeniText
+{
+    display: flex;
+    height: 150px;
+}
+.izmeniText label
+{
+    width: 30%;
+}
+.izmeniText textarea
+{
+    width: 70%;
+}
+.izmeniAlergija
+{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin: 10px auto;
+}
+.izmeniAlergija label
+{
+    width: 30%;
+}
+.izmeniAlergija textarea
+{
+    width: 70%;
+}
+.izmeniButton
+{
+    padding: 10px;
+}
+.linkIzmeni
+{
+    background-image: url('/images/pencil.png');
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: 4px;
+    vertical-align: middle;
+}

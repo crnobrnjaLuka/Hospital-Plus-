@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .disapear
+        {
+            display: none;
+        }
+    
+    
+    </style>
+</head>
+<body>
+        <!-- visak->ID,ime,prezime,datum_rodj,istorija_bolesti, alergija_lek -->
+
+        <!-- forma za izmenu ce imati i: -->
+
+        <!-- <input type="number" name='id' value="ucitano" readonly required> -->
+
+        <!-- i ostatak nije requred -->
+        <button class='linkDugme' data-link='/osoblje'>Nazad</button>
+        
+        <form action="#" method="POST">
+            @csrf
+            <!-- id je ako je za update -->
+            Id <input type="number" name='id' value="ucitano" readonly required>
+            Sifra <input type="text" name="sifra" value="ucitano" requred>
+            Naziv <input type="text" name="ime" value="ucitano" requred>
+            <!-- kolicina ako su pitanju lekovi, za bolesti ne treba -->
+            Kolicina <input type="number" name="kolicina" value="ucitano" requred>
+            <!-- Requred je obavezan za id, i za sva ostala polja ako je za pravljenje. Za update je obavezno da se popuni samo id, osim 
+            ako se vrednosti ne ucitavaiju iz baze, kada je neophodno da sve bude popunjeno.  -->
+           
+            <input id='dugme' type="submit" value="Posalji">
+
+
+        </form>
+</body>
+</html>
